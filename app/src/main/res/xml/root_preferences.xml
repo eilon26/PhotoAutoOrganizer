@@ -1,0 +1,55 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="activation">
+
+        <SwitchPreferenceCompat
+            app:key="activate"
+            app:summaryOff="off"
+            app:summaryOn="on"
+            app:title="activate"
+            app:defaultValue="off"/>
+    </PreferenceCategory>
+
+
+
+    <PreferenceCategory app:title="preferences">
+
+        <ListPreference
+            app:summary="Camera"
+            app:entries="@array/folders_entries"
+            app:entryValues="@array/pathes_values"
+            app:key="pics_path"
+            app:title="destination folder" />
+
+        <EditTextPreference
+            app:title="minimum photos in album"
+            app:key="min_pictures"
+            app:persistent="false"
+            app:summary = '10' />
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="set home">
+
+        <Preference
+            app:title="current location"
+            app:key="get_location" />
+
+        <EditTextPreference
+            app:title="city"
+            app:key="city_name" />
+
+        <EditTextPreference
+            app:title="street"
+            app:key="street_name" />
+
+
+
+    </PreferenceCategory>
+
+
+
+
+
+</PreferenceScreen>
